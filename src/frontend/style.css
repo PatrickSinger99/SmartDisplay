@@ -1,0 +1,26 @@
+html, body {
+    width: 1080px;
+    height: 1920px;
+    margin: 0;
+    overflow: hidden;
+
+  }
+
+.root {
+    width: inherit;
+    height: inherit;
+    background-color: #35364a;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-rows: 16;
+    grid-template-columns: 9;
+}
+
+.grid_container > div {
+    background-color: red;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
