@@ -25,30 +25,38 @@ html, body {
   display: flex;
 }
 
-.content_wrapper_div {
-  padding-inline: 1%;
-}
-
-#weather_wrapper_div {
+#weather_div {
   flex: 0.2;
-  width: 100%;
+  width: 96%;
+  margin-left: 1%;
 }
 
-#camera_wrapper_div {
+#camera_div {
   flex: 0.5;
-  width: 100%;
+  width: 96%;
+  margin-left: 1%;
 }
 
-#traffic_wrapper_div {
-  flex: 0.5;
-  width: 50%;
-}
-
-#todo_wrapper_div {
+#traffic_div {
   flex: 0.5;
   width: 50%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+}
+
+#todo_div {
+  flex: 0.5;
+  width: 50%;
+  margin-bottom: 1%;
 }
 
 .content_div {
-  background-color: black;
+  margin-top: 1%;
+  margin-right: 1%;
+  padding: 1%;
+  background-color: #4E516D;
+  border-radius: 12px;
+  color: #35364a;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
 }
