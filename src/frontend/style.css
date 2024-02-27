@@ -12,15 +12,43 @@ html, body {
     background-color: #35364a;
 }
 
-.grid_container {
-    display: grid;
-    grid-template-rows: 16;
-    grid-template-columns: 9;
+.container {
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.grid_container > div {
-    background-color: red;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
-  }
+.sub_container {
+  flex: 0.3;
+  width: 100%;
+  display: flex;
+}
+
+.content_wrapper_div {
+  padding-inline: 1%;
+}
+
+#weather_wrapper_div {
+  flex: 0.2;
+  width: 100%;
+}
+
+#camera_wrapper_div {
+  flex: 0.5;
+  width: 100%;
+}
+
+#traffic_wrapper_div {
+  flex: 0.5;
+  width: 50%;
+}
+
+#todo_wrapper_div {
+  flex: 0.5;
+  width: 50%;
+}
+
+.content_div {
+  background-color: black;
+}
