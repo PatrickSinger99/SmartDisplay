@@ -1,0 +1,42 @@
+@startuml component diagram
+
+node "Camera" as camera
+node "Display" as Display
+
+node "Raspberry Pi" as rpi {
+
+    package "Smart Display Software" as software{
+        component [Weather Forecast Component] as WeatherComp
+        component [Camera Component] as CameraComp
+        component [Traffic Component] as TrafficComp
+        component [ToDo List Component] as TodoComp
+        component [Frontend] as FrontendComp
+
+        FrontendComp <-d-> WeatherComp
+        FrontendComp <-d-> CameraComp
+        FrontendComp <-d-> TrafficComp
+        FrontendComp <-d-> TodoComp
+    }
+
+    port "CSI Connector" as csiPort
+    port "HDMI Port" as hdmiPort
+    
+    FrontendComp --> hdmiPort
+    hdmiPort --> Display
+    
+    CameraComp --> csiPort
+    csiPort --> camera
+
+}
+
+interface "Openweathermap API" as weatherApi
+WeatherComp ..> weatherApi : "call"
+
+interface "Google Routes API" as routeApi
+TrafficComp ..> routeApi : "call"
+
+interface "Anylist API" as todoApi
+TodoComp ..> todoApi : "call"
+
+
+@enduml
